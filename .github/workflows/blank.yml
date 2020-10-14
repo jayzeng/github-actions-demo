@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        run: echo ${{ env.number - 10 }} 
+        run: echo $(${{ env.number }} - 10)
