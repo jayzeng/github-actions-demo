@@ -18,6 +18,6 @@ jobs:
 
       - name: Run a one-line script
         run: |
-          echo "$((${{ env.number }} - 5)Gi)" >> $updated_number
-          echo ${{ env.updated_number }}
+          echo "$((${{ env.number }} - 5))" >> $updated_number
+          # echo ${{ env.updated_number }}
           echo $updated_number
