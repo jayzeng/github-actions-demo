@@ -16,8 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: |
-          echo `echo "${{ env.number }} - 5" | bc` >> $updated_number
-          # echo ${{ env.updated_number }}
-          echo $updated_number
+      - name: Take photo of github.com
+        uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
+        with:
+          url: https://github.com
