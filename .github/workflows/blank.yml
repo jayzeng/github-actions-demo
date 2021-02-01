@@ -14,9 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Take photo of github.com
-        uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
-        with:
-          url: https://github.com
+      - name: Set the value
+        id: step_one
+        run: |
+            echo "action_state=yellow" >> $GITHUB_ENV
+      - name: Use the value
+        id: step_two
+        run: |
+            echo "${{ env.action_state }}" # This will output 'yellow'
